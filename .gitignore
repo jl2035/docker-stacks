@@ -68,3 +68,4 @@ dockerspawner.tar.gz
 .ipynb_checkpoints/
 .vscode/
 .pytest_cache/
+scipy-notebook/home_dir/*

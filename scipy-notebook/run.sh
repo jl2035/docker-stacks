@@ -2,4 +2,6 @@
 
 docker stop jupitery
 docker rm jupitery
-docker run --name jupitery -p 8888:8888 -v home_dir:/home/jovyan jupitery_scipy_notebook:1.0.0
+HOMEDIR="$(pwd)/home_dir"
+docker run -d --name jupitery -e JUPYTER_ENABLE_LAB=yes -p 8888:8888 -v $HOMEDIR:/home/jovyan jupitery_scipy_notebook:1.0.0
+
